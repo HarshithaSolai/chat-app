@@ -15,6 +15,7 @@ const ActiveChat = () => {
 
     // Clean up the interval when the component is unmounted or conversation changes
     return () => clearInterval(messagePollingIntervalRef.current);
+    // eslint-disable-next-line
   }, [conversationId]);
 
   const refreshActiveChat = async () => {

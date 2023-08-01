@@ -21,6 +21,7 @@ const Chat = () => {
     } else {
       fetchUsers();
     }
+    // eslint-disable-next-line
   }, [userId, navigate]);
 
   const fetchUsers = async () => {

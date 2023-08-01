@@ -45,7 +45,7 @@
 Using Bunq Assignment API https://assignment.bunq.com/api for data. Maintaining all dynamic data (API url, data fetching, constant values) in a separate file so that changes can be easily made in future.
 
 ## Live Demo
-Please check https://chat-app.netlify.app/ for live demo.
+Please check https://bunq-chat-app.netlify.app/ for live demo.
 If you want to run the app in local, please check next section.
 
 ## Running Scripts
