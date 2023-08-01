@@ -11,6 +11,7 @@
 - [Live Demo](#live-demo)
 - [Running Scripts](#running-scripts)
 - [Improvements](#improvements)
+- [Version Control ](#version-control)
 
 ## Requirement Analysis
 1. Login using username and password (There is no auth service so checking if username is present in the list of users from API, if valid user, take to landing page else show error message)
@@ -46,6 +47,20 @@ Using Bunq Assignment API https://assignment.bunq.com/api for data. Maintaining 
 
 ## Live Demo
 Please check https://bunq-chat-app.netlify.app/ for live demo.
+
+You will get the following error intially, since we are trying to access insecure http server from secure https website.
+
+```
+xhr.js:251 Mixed Content: The page at 'https://bunq-chat-app.netlify.app/' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://assignment.bunq.com/api/user'. This request has been blocked; the content must be served over HTTPS.
+
+```
+
+To fix it, do the following steps :
+1. Click on the lock icon in the url 
+2. Select Site settings
+3. Under Permissions, change Insure content from 'block' to 'Allow'
+4. Reload the webpage again, now we can access bunq http endpoint from https chat-app 
+
 If you want to run the app in local, please check next section.
 
 ## Running Scripts
@@ -62,10 +77,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `yarn test or npm test`
-
-Launches the test runner in the interactive watch mode.\
 
 ### `yarn build or npm build`
 
@@ -85,3 +96,5 @@ Due to time constraints and keeping the chat app simple, I purposefully skipped 
 - I used Context API for data management purpose, and did not cache the messages. I could have used redux in that case
 - Infinite scrolling of chat and conversation list. Since there were limited users and chats, I did not implement it.
 
+## Version Control 
+Working Code is also available in (GitHub)[https://github.com/HarshithaSolai/chat-app]
