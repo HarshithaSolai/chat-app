@@ -3,6 +3,11 @@
 ## Objective : 
   Create a simple react chat application where a user must be able to login, view one-to-one conversations with other users, send a new message in a conversation and new messages appear automatically in the conversation
 
+![bunq-chat-login](bunq-chat-login.png)
+
+![bunq-chat](bunq-chat.png)
+
+
 ## Table of contents:
 - [Requirement Analysis](#requirement-analysis)
 - [Tech Stack](#tech-stack)
