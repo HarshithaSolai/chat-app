@@ -97,4 +97,4 @@ Due to time constraints and keeping the chat app simple, I purposefully skipped 
 - Infinite scrolling of chat and conversation list. Since there were limited users and chats, I did not implement it.
 
 ## Version Control 
-Working Code is also available in (GitHub)[https://github.com/HarshithaSolai/chat-app]
+Working Code is also available in [GitHub](https://github.com/HarshithaSolai/chat-app)
