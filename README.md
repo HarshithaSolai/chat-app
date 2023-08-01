@@ -1,12 +1,61 @@
-# Getting Started with Create React App
+# Bunq Assignment - A Chat Application in React 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective : 
+  Create a simple react chat application where a user must be able to login, view one-to-one conversations with other users, send a new message in a conversation and new messages appear automatically in the conversation
 
-## Available Scripts
+## Table of contents:
+- [Requirement Analysis](#requirement-analysis)
+- [Tech Stack](#tech-stack)
+- [Design](#design)
+- [API Endpoints](#api-endpoints)
+- [Live Demo](#live-demo)
+- [Running Scripts](#running-scripts)
+- [Improvements](#improvements)
 
-In the project directory, you can run:
+## Requirement Analysis
+1. Login using username and password (There is no auth service so checking if username is present in the list of users from API, if valid user, take to landing page else show error message)
+2. Create a personal chat 
+3. Create a group chat
+4. View all conversations for a given user
+5. On click of each conversation (personal or group), view one-to-one conversation with that user or group
+6. Send new messages to users (personal or group)
+7. Show realtime data using Polling ( Poll every 5 seconds)
+8. Logging out of the current user and login as another user
 
-### `yarn start`
+## Tech Stack
+- **UI Framework** :  React
+
+- **Routing** : React Router DOM 
+
+- **CSS Framework** : Tailwind CSS
+
+- **Http Client** : Axios
+
+- **Data/State Management** : React in-built techniques like Props drilling, lifting up state, hooks and Context API for sharing data (props) between components.
+
+- **Hosting** : Netlify 
+
+## Design
+### UX
+- Simple design & easy to understand 
+- Responsive 
+- Real-time chat experience
+
+## API Endpoints 
+Using Bunq Assignment API https://assignment.bunq.com/api for data. Maintaining all dynamic data (API url, data fetching, constant values) in a separate file so that changes can be easily made in future.
+
+## Live Demo
+Please check https://chat-app.netlify.app/ for live demo.
+If you want to run the app in local, please check next section.
+
+## Running Scripts
+After cloning the project, you can run the following in the project directory.
+
+### `yarn install or npm install`
+
+Installs the required packages.
+
+### `yarn start or npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,12 +63,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `yarn test`
+### `yarn test or npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### `yarn build or npm build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,44 +75,13 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Improvements
 
-### `yarn eject`
+Due to time constraints and keeping the chat app simple, I purposefully skipped few things like 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- I did not implement Testing (Unit testing - Jest / React Testing library) currently. 
+- Websockets will be used in realtime chat applications, I used polling here and it is continuously polling for every 5 secs, which could make lot of API calls to server. 
+- Authentication service was not available so just did some validation on teh front end for assignment purpose.
+- I used Context API for data management purpose, and did not cache the messages. I could have used redux in that case
+- Infinite scrolling of chat and conversation list. Since there were limited users and chats, I did not implement it.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
